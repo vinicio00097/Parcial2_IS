@@ -15,5 +15,8 @@ public class ProductoService {
     public List<ProductoEntity> buscarTodos() {
         return (List<ProductoEntity>) this.productoRepository.findAll();
     }
-    
+
+    public ProductoEntity add(ProductoEntity productoEntity){
+        return this.productoRepository.save(productoEntity);
+    }
 }
