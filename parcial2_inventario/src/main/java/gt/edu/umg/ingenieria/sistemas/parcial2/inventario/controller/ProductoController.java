@@ -22,5 +22,9 @@ public class ProductoController {
     public ProductoEntity crear(@RequestBody ProductoEntity productoEntity){return this.productoService.add(productoEntity);}
 
 
+    @PutMapping("/actualizarStock/{id}/{action}/{cantidad}")
+    public  ProductoEntity update(@PathVariable Long id,@PathVariable String action,@PathVariable int cantidad){
+        return this.productoService.update(id,action,cantidad);
+    }
 
 }
