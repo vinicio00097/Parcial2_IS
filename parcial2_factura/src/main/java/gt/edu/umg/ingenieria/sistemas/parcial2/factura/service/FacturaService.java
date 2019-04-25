@@ -28,4 +28,8 @@ public class FacturaService {
     public List<DetalleFacturaEntity> buscarTodosDetallesFactura(Long idCabeceraFactura) {
         return this.detalleFacturaRepository.findByHeader(idCabeceraFactura);
     }
+
+    public CabeceraFacturaEntity createCabecera(CabeceraFacturaEntity cabeceraFacturaEntity){
+        return this.cabeceraFacturaRepository.save(cabeceraFacturaEntity);
+    }
 }
