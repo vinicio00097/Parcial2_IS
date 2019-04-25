@@ -14,7 +14,7 @@ public class ProductoEntity implements Serializable {
     @Id
     @GeneratedValue
     @Column(name = "id")
-    private Long idd;
+    private Long id;
     
     @Column(name = "nombre")
     private String name;
@@ -39,11 +39,11 @@ public class ProductoEntity implements Serializable {
     }
 
     public Long getId() {
-        return idd;
+        return id;
     }
 
     public void setId(Long id) {
-        this.idd = id;
+        this.id = id;
     }
 
     public String getName() {
